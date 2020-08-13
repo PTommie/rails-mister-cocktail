@@ -1,0 +1,18 @@
+// Place all the styles related to the cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+  h1 {
+    font-family: $body-font;
+  }
+
+.cards {
+  width:500px;
+  margin: 0 auto;
+  display:inline-flex;
+  justify-content:center;
+}
+
+.card {
+  width: 400px;
+}
