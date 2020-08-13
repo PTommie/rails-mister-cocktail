@@ -1,14 +1,16 @@
-<h1> Cocktails </h1>
 
-<div class="cards">
-  <% @cocktails.each do |cocktail| %>
-    <ul>
-      <div class="card">
-      <li> <h2> <%= cocktail.name %> </h2>
-      <p> <%= link_to "details", cocktail_path(cocktail) %> </p> </li>
-      </div>
-    </ul>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random);">
+    <h1> Cocktails </h1>
+  </div>
+  <div class="container">
+    <% @cocktails.each do |cocktail| %>
 
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random);">
+          <ul>
+            <li> <h2> <%= cocktail.name %> </h2>
+            <p> <%= link_to "details", cocktail_path(cocktail) %> </p> </li>
+          </ul>
+        </div>
   <% end %>
 
 </div>
