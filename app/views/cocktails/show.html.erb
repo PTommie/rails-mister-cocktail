@@ -1,12 +1,23 @@
 
-  <h1> Name: <%= @cocktail.name %> </h1>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/600x400/?drink,#{@cocktail.name);">
+  <h1> <%= @cocktail.name %> </h1>
+</div>
+
+<div class="btn-container ">
+   <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success" %>
+    <%= link_to "Back", cocktails_path, class: "btn btn-warning" %>
+</div>
 
 
- <%= link_to "Add a new cocktail", new_cocktail_path(@cocktail) %>
-   <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail) %>
-    <%= link_to "Back", cocktails_path %>
-
-  <p> <% @cocktail.doses.each do |dose| %>
-  <%= dose.description %> - <%= dose.ingredient.name %>
-  <%= link_to "Delete a dose",dose_path(dose) , method: :delete %> </p>
-  <% end %>
+  <div class="container">
+    <p> <% @cocktail.doses.each do |dose| %>
+      <div class="card" id="color-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/400x300/?drink,#{@cocktail.name});">
+        <div class="p-card">
+          <p> <%= dose.description %> </p>
+          <p> <%= dose.ingredient.name %> </p>
+          <%= link_to "Delete a dose",dose_path(dose) , method: :delete, class: "btn btn-danger delete-link" %>
+        </div>
+      </div>
+    <% end %>
+  </div>

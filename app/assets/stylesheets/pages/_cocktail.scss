@@ -1,0 +1,34 @@
+.btn-container {
+  display:flex;
+  justify-content:center;
+    .btn {
+      margin: 10px 10px 0 10px;
+    }
+}
+
+.btn-container a {
+  color: black;
+}
+
+.p-card {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  p {
+    font-size:30px;
+  }
+}
+
+.delete-link {
+  bottom: 10px;
+  left:44%;
+}
+
+#color-card {
+  background-color: #ffffdd;
+  color:white;
+  height:200px;
+  text-align: center;
+}
